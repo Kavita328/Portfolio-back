@@ -4,7 +4,6 @@ require('dotenv').config();
 
 
 const apiKey = process.env.OWM_API_KEY
-console.log(apiKey)
 const channelId = process.env.CHANNEL_ID
 
 
