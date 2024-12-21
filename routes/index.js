@@ -6,6 +6,9 @@ require('dotenv').config();
 const apiKey = process.env.OWM_API_KEY
 const channelId = process.env.CHANNEL_ID
 
+router.get('/', (req, res) => {
+  res.send('Bienvenue sur mon site web !');
+});
 
 router.get('/videos', (req, res) => {
   fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&type=video&order=date`)
