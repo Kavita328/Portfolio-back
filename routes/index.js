@@ -7,8 +7,8 @@ const apiKey = process.env.OWM_API_KEY
 const channelId = process.env.CHANNEL_ID
 
 router.get('/', (req, res) => {
-  res.send('Bienvenue sur mon site web !');
-});
+  res.send("Congratulation 🎉🎉! Our Express server is Running on Vercel")
+ });
 
 router.get('/videos', (req, res) => {
   fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&type=video&order=date`)
@@ -17,6 +17,7 @@ router.get('/videos', (req, res) => {
       res.json({ videos: data });
     });
  });
+
 
 module.exports = router;
 
